@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
+        <element label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="Beer" label="Request type" mandatory="true" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element label="Beer" sequence="0" value="Beer"/>
+                <element label="Wine" sequence="1" value="Wine"/>
+                <element label="Spirits" sequence="2" value="Spirits"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="Lager" label="What needed" mandatory="true" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element label="Ale" sequence="0" value="Ale"/>
+                <element label="Lager" sequence="1" value="Lager"/>
+                <element label="Merlot" sequence="2" value="Merlot"/>
+                <element label="Reisling" sequence="3" value="Reisling"/>
+                <element label="Rum" sequence="4" value="Rum"/>
+                <element label="Rye" sequence="5" value="Rye"/>
+            </choice>
+        </element>
+        <element label="When needed" mandatory="true" max_length="40" name="u_when_needed" type="glide_date_time"/>
+    </element>
+</database>
